@@ -1,0 +1,72 @@
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 40px;
+    overflow: hidden;
+  }
+  
+  input, button {
+    font-size: 1.2em;
+    margin: 10px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    border: none;
+  }
+  
+  input {
+    background-color: #1e1e1e;
+    color: white;
+  }
+  
+  button {
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #555;
+  }
+  
+  #earnings {
+    font-size: 2em;
+    margin-top: 20px;
+    color: #ffd700;
+    text-shadow: 0 0 10px #ffd700;
+  }
+  
+  .coin {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(circle at 30% 30%, #fffbbd, #ffd700, #b8860b);
+    border-radius: 50%;
+    box-shadow: 0 0 10px #ffdd55, 0 0 20px #ffcc00;
+    animation: fall 2.5s linear forwards;
+    pointer-events: none;
+    opacity: 0.9;
+  }
+  
+  @keyframes fall {
+    0% {
+      top: -40px;
+      transform: rotate(0deg) scale(0.9);
+    }
+    100% {
+      top: 110vh;
+      transform: rotate(360deg) scale(1.2);
+      opacity: 0;
+    }
+  }
+  #coinCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    pointer-events: none;
+  }
+  
+  
